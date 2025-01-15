@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Food Menu</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        /* Styling for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Styling for the links inside the navigation bar */
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Change the color of links on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Clear float */
+        .content {
+            clear: both;
+            padding: 20px;
+        }
+
+        /* Styling for the menu sections */
+        .menu-section {
+            margin: 20px 0;
+        }
+
+        .menu-section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* Styling for the buttons */
+        .menu-item button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .menu-item button:hover {
+            background-color: #ddd;
+        }
+
+        /* Styling for the recipe details */
+        .recipe {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="#appetizers">Appetizers</a>
+        <a href="#main-courses">Main Courses</a>
+        <a href="#desserts">Desserts</a>
+        <a href="#drinks">Drinks</a>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Appetizers Section -->
+        <div id="appetizers" class="menu-section">
+            <h2>Appetizers</h2>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-edamame')">Edamame</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-gyoza')">Gyoza</button>
+            </div>
+        </div>
+
+        <!-- Main Courses Section -->
+        <div id="main-courses" class="menu-section">
+            <h2>Main Courses</h2>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-sushi')">Sushi Platter</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-ramen')">Ramen</button>
+            </div>
+        </div>
+
+        <!-- Desserts Section -->
+        <div id="desserts" class="menu-section">
+            <h2>Desserts</h2>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-mochi')">Mochi Ice Cream</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-cheesecake')">Green Tea Cheesecake</button>
+            </div>
+        </div>
+
+        <!-- Drinks Section -->
+        <div id="drinks" class="menu-section">
+            <h2>Drinks</h2>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-sake')">Sake</button>
+            </div>
+            <div class="menu-item">
+                <button onclick="showRecipe('recipe-tea')">Green Tea</button>
+            </div>
+        </div>
+
+        <!-- Recipe Details -->
+        <div id="recipe-edamame" class="recipe">
+            <h2>Edamame Recipe</h2>
+            <p>Ingredients: Fresh edamame, sea salt.</p>
+            <p>Instructions: Steam the edamame for 5-7 minutes, then sprinkle with sea salt and serve.</p>
+        </div>
+        <div id="recipe-gyoza" class="recipe">
+            <h2>Gyoza Recipe</h2>
+            <p>Ingredients: Pork, cabbage, garlic, ginger, gyoza wrappers.</p>
+            <p>Instructions: Mix pork with finely chopped cabbage, garlic, and ginger. Wrap in gyoza wrappers and pan-fry until golden brown.</p>
+        </div>
+        <div id="recipe-sushi" class="recipe">
+            <h2>Sushi Platter Recipe</h2>
+            <p>Ingredients: Sushi rice, assorted fish, seaweed, soy sauce, wasabi, pickled ginger.</p>
+            <p>Instructions: Prepare sushi rice, slice fish, and assemble sushi with seaweed. Serve with soy sauce, wasabi, and pickled ginger.</p>
+        </div>
+        <div id="recipe-ramen" class="recipe">
+            <h2>Ramen Recipe</h2>
+            <p>Ingredients: Ramen noodles, pork broth, slices of pork, seaweed, green onions.</p>
+            <p>Instructions: Cook ramen noodles, heat broth, and combine with toppings. Serve hot.</p>
+        </div>
+        <div id="recipe-mochi" class="recipe">
+            <h2>Mochi Ice Cream Recipe</h2>
+            <p>Ingredients: Mochi dough, ice cream.</p>
+            <p>Instructions: Wrap small scoops of ice cream with mochi dough and freeze until firm.</p>
+        </div>
+        <div id="recipe-cheesecake" class="recipe">
+            <h2>Green Tea Cheesecake Recipe</h2>
+            <p>Ingredients: Cream cheese, sugar, eggs, matcha powder, graham cracker crust.</p>
+            <p>Instructions: Blend cream cheese, sugar, eggs, and matcha powder. Pour into crust and bake until set.</p>
+        </div>
+        <div id="recipe-sake" class="recipe">
+            <h2>Sake Recipe</h2>
+            <p>Ingredients: Rice, water, koji mold, yeast.</p>
+            <p>Instructions: Ferment rice with water, koji mold, and yeast. Filter and pasteurize the sake.</p>
+        </div>
+        <div id="recipe-tea" class="recipe">
+            <h2>Green Tea Recipe</h2>
+            <p>Ingredients: Green tea leaves, water.</p>
+            <p>Instructions: Brew green tea leaves in hot water for 2-3 minutes. Serve hot or cold.</p>
+        </div>
+    </div>
+
+    <script>
+        function showRecipe(recipeId) {
+            // Hide all recipe details
+            var recipes = document.querySelectorAll('.recipe');
+            recipes.forEach(function(recipe) {
+                recipe.style.display = 'none';
+            });
+
+            // Show the selected recipe
+            var selectedRecipe = document.getElementById(recipeId);
+            selectedRecipe.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
